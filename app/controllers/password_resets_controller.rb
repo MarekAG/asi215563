@@ -41,18 +41,14 @@ class PasswordResetsController < ApplicationController
       params.require(:user).permit(:password, :password_confirmation)
     end
 
-    # Returns true if password is blank.
     def password_blank?
       params[:user][:password].blank?
     end
-
-    # Before filters
 
     def get_user
       @user = User.find_by(email: params[:email])
     end
 
-    # Confirms a valid user.
     def valid_user
       unless (@user && @user.activated? &&
               @user.authenticated?(:reset, params[:id]))
@@ -60,7 +56,6 @@ class PasswordResetsController < ApplicationController
       end
     end
 
-    # Checks expiration of reset token.
     def check_expiration
       if @user.password_reset_expired?
         flash[:danger] = "Password reset has expired."
