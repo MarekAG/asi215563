@@ -1,14 +1,21 @@
-User.create!(name:  "Example User",
-             email: "example@railstutorial.org",
-             password:              "foobar",
-             password_confirmation: "foobar",
+User.create!(name:  "Marek Strzała",
+             email: "marekwstrzala@gmail.com",
+             password:              "haslo123",
+             password_confirmation: "haslo123",
              admin: true,
+             activated: true,
+             activated_at: Time.zone.now)
+
+User.create!(name:  "Pan Testowy",
+             email:  "wojtark@vp.pl",
+             password:              "haslo123",
+             password_confirmation: "haslo123",
              activated: true,
              activated_at: Time.zone.now)
 
 99.times do |n|
   name  = Faker::Name.name
-  email = "example-#{n+1}@railstutorial.org"
+  email = "example-#{n+1}@example.org"
   password = "password"
   User.create!(name:  name,
                email: email,
