@@ -20,7 +20,7 @@ class User < ActiveRecord::Base
   validates :password, length: { minimum: 6 }, allow_blank: true
   def self.search(search)
     if search
-     self.where("name like ?", "%#{search}%")
+     self.where("name like ? OR email like ?", "%#{search}%", "%#{search}%")
     else
       self.all
     end
