@@ -1,6 +1,6 @@
-<% provide(:title, 'Users') %>
+<% provide(:title, 'Crowers') %>
 
-<h1>Users</h1>
+<h1>Crowers</h1>
 
 <%= form_tag users_path, :method => :get do %>
   <p>
@@ -10,7 +10,7 @@
 <% end %>
 <%= form_tag users_path, :method => :get do %>
   <p>
-    <%= link_to "Show all", users_path %>
+    <%= link_to "Show all", users_path, class: "btn btn-lg btn-primary" %>
   </p>
 <% end %>
 
