@@ -5,14 +5,11 @@ class UsersController < ApplicationController
   before_action :admin_user,     only: :destroy
 
   def index
-    if params[:search]
-      @search = User.search do
-        fulltext params[:search]
-        paginate(page: params[:page], :per_page => 20)
-      end
-        @users = @search.results
-      else
-        @users = User.paginate(page: params[:page], :per_page => 20)
+      @users = User.all
+      @users = User.paginate(page: params[:page], :per_page =>20).order('id ASC').search(params[:search])
+      respond_to do |format|
+        format.html
+        format.js
     end
   end
 

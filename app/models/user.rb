@@ -18,10 +18,14 @@ class User < ActiveRecord::Base
                     uniqueness: { case_sensitive: false }
   has_secure_password
   validates :password, length: { minimum: 6 }, allow_blank: true
-  # searchable do
-  #   text :name, :email
-  # end
-  # Returns the hash digest of the given string.
+  def self.search(search)
+    if search
+     self.where("name like ?", "%#{search}%")
+    else
+      self.all
+    end
+  end
+
   def User.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
                                                   BCrypt::Engine.cost
