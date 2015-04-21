@@ -1,6 +1,26 @@
 # Ruby on Rails "Crower"
 
+
+## About
+[What is it?](https://asi215563.herokuapp.com/about)
+
+#### Little dictionary
+
+Crower ~ Twitter
+
+Crowers - Users
+
+Crow - Tweet
+
+
 App based on https://www.railstutorial.org/book/
+- all things from tutorial are implemented
+- added search
+- added some links and views
+- changed overrall look & fill
+- added different seed's data
+- images are stored on server
+- changed pagination
 
 ## Test user
 ```
