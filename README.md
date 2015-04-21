@@ -1,3 +1,11 @@
-# Ruby on Rails learning
+# Ruby on Rails "Crower"
 
-nothing interesting here
+App based on https://www.railstutorial.org/book/
+
+## Heroku
+
+https://www.railstutorial.org/book/
+
+## Author
+
+Marek Strzała 
