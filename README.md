@@ -4,14 +4,6 @@
 ## About
 [What is it?](https://asi215563.herokuapp.com/about)
 
-#### Little dictionary
-
-Crower ~ Twitter
-
-Crowers - Users
-
-Crow - Tweet
-
 
 App based on https://www.railstutorial.org/book/
 - all things from tutorial are implemented
@@ -21,6 +13,14 @@ App based on https://www.railstutorial.org/book/
 - added different seed's data
 - images are stored on server
 - changed pagination
+
+#### Little dictionary
+
+Crower ~ Twitter
+
+Crowers - Users
+
+Crow - Tweet
 
 ## Test user
 ```
