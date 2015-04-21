@@ -11,7 +11,7 @@ Pass: password
 
 ## Register
 
-You must register with real e-mail address. There will be confirmation link send.
+If you want to register, you must do it with real e-mail address. There will be confirmation link send.
 
 ## Heroku
 
